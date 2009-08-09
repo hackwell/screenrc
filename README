@@ -1,7 +1,7 @@
 # Filename: README
 # Purpose: README for GNU my .screenrc
 # Last Update: 2009.08.08
-# Current Author: Rob Friedman / <px@ns1.net> / px.ns1.net
+# Current Author: Rob Friedman / <px@ns1.net> / http://px.ns1.net
 # ===============================================================
 #
 # ===============================================================
@@ -11,18 +11,20 @@ http://github.com/px/screenrc/
 
 This is my GNU .screenrc file and a simple something to push it to $HOME;
 
-Hopefully large files with all their comments and crap do not take up much screen memory.
-I left a lot of the cruft as I tweaked the visuals.
+Hopefully large files with all their comments and crap do not take
+up much screen memory. I left a lot of the cruft as I tweaked the visuals.
 
 
 ## HISTORY:
 2009.08.08
-I'm not sure when I originally got the .screenrc began modifying it. It was sometime in 2004 I believe.
+I'm not sure when I originally downloaded the .screenrc began modifying it.
+It was sometime in 2004 I believe.
 
-I added a neat bottom status bar tweaked it's operation and then modified to colors I like.
+I added a neat bottom status bar tweaked it's operation and then
+modified to colors I like.
 Changed the escape key to `
 Tried to get some ssh-agent support; Not quite there.
 
-The .screen originally came from Michael Prokop / <online@michael-prokop.at> / www.michael-prokop.at
-Latest change: Mon Jan 26 10:51:50 CET 2004
+The .screen originally came from:
+Michael Prokop / <online@michael-prokop.at> / www.michael-prokop.at
 
