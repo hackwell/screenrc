@@ -10,6 +10,3 @@ FILES=".screenrc"
 for x in $FILES; do
 	cp $x $HOME
 done
-
-cd -
-
