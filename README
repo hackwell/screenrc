@@ -1,0 +1,17 @@
+This is my GNU .screenrc file and a simple something to push it to $HOME;
+
+Hopefully large files with all their comments and crap do not take up much screen memory.
+I left a lot of the cruft as I tweaked the visuals.
+
+
+## History:
+2009.08.08
+I'm not sure when I originally got the .screenrc began modifying it.
+
+I added a neat bottom status bar tweaked it's operation and then modified to colors I like.
+Changed the escape key to `
+Tried to get some ssh-agent support; Not quite there.
+
+The .screen originally came from Michael Prokop / <online@michael-prokop.at> / www.michael-prokop.at
+Latest change: Mon Jan 26 10:51:50 CET 2004
+
