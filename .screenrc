@@ -60,6 +60,11 @@ escape ``
 
 screen -t vmstat	0	vmstat 10
 screen -t htop		1	htop
+
+#screen -t logs 		90	
+screen -t asterisk	97	/usr/bin/sudo -u asterisk /usr/sbin/asterisk -cvvvvr
+screen -t mytop		96	mytop
+#screen -t alog		98	/home/px/bin/alog.sh
 #!#screen -t irssi		99	irssi -!
 
 #
@@ -760,25 +765,36 @@ screen -t htop		1	htop
 # and you don't have to have the functionality of
 # "abbreviating" in the processes themselves. :-)
 #
+
+bind V screen -t vmstat		0	vmstat 10
+bind H screen -t htop		1	htop
+
+#bind A screen -t asterisk	97	/usr/bin/sudo -u asterisk /usr/sbin/asterisk -cvvvvr
+#screen -t alog		3	/bin/tail -f /var/log/apache/*log
+ 
+#bind 
+bind I screen -t irssi		99	irssi -!
+
+
 # FUNCTION KEYS 11 12
-  bindkey -k -m F1 eval 'stuff "Y"'  colon 'stuff "paste .^M"' #COPY AND PASTE LINE WITH F1
-  bindkey -k -m F2 eval 'stuff "W"'  colon 'stuff "paste .^M"' #COPY AND PASTE WORD WITH F2
+#  bindkey -k -m F1 eval 'stuff "Y"'  colon 'stuff "paste .^M"' #COPY AND PASTE LINE WITH F1
+#  bindkey -k -m F2 eval 'stuff "W"'  colon 'stuff "paste .^M"' #COPY AND PASTE WORD WITH F2
 
 #END KEY
-  bindkey -k -m kH eval 'stuff "Y"' 'stuff " "' colon 'stuff "paste .^M^M"'         # paste the line with END
-  bindkey    -m "^[O2F" eval 'stuff "W"' 'stuff " "' colon 'stuff "paste .^M^M"'    # paste a word with SHIFT-END in COPY mode
+#  bindkey -k -m kH eval 'stuff "Y"' 'stuff " "' colon 'stuff "paste .^M^M"'         # paste the line with END
+#  bindkey    -m "^[O2F" eval 'stuff "W"' 'stuff " "' colon 'stuff "paste .^M^M"'    # paste a word with SHIFT-END in COPY mode
 
 # 030511 Some usefull abbreviations
-  bindkey -t ROFL stuff *ROFL*
+#  bindkey -t ROFL stuff *ROFL*
 #  bindkey -t °web stuff "www.michael-prokop.at"
 # 030511 Workaround for stupid machines without xmodmap ;-)
-  bindkey -t °a stuff "ä"
-  bindkey -t °A stuff "Ä"
-  bindkey -t °o stuff "ö"
-  bindkey -t °O stuff "Ö"
-  bindkey -t °u stuff "ü"
-  bindkey -t °U stuff "Ü"
-  bindkey -t °s stuff "ß"
+#  bindkey -t °a stuff "ä"
+#  bindkey -t °A stuff "Ä"
+#  bindkey -t °o stuff "ö"
+#  bindkey -t °O stuff "Ö"
+#  bindkey -t °u stuff "ü"
+#  bindkey -t °U stuff "Ü"
+#  bindkey -t °s stuff "ß"
 #
 # ===============================================================
 # BIND Examples:
