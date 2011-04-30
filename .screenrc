@@ -57,6 +57,11 @@ escape ``
 # screen -t google     2 links http://www.google.com
 # screen -t slrn       3 slrn
 # screen -t www        4 $BROWSER http://www.michael-prokop.at/
+
+screen -t vmstat	0	vmstat 10
+screen -t htop		1	htop
+#!#screen -t irssi		99	irssi -!
+
 #
 # ===============================================================
 # VARIABLES - Boolean values (on/off)
@@ -128,7 +133,7 @@ escape ``
 # ===============================================================
 # VARIABLES - Number values
 # ===============================================================
-  defscrollback         2000            # default: 100
+  defscrollback         4000            # default: 100
 # msgminwait            3               # default: 1
   silencewait           15              # default: 30
 #
