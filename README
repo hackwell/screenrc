@@ -1,6 +1,6 @@
 # Filename: README
 # Purpose: README for GNU my .screenrc
-# Last Update: 2009.08.08
+# Last Update: 2011.08.07
 # Current Author: Rob Friedman / <px@ns1.net> / http://px.ns1.net
 # ===============================================================
 #
@@ -16,6 +16,10 @@ up much screen memory. I left a lot of the cruft as I tweaked the visuals.
 
 
 ## HISTORY:
+2011.08.07
+	Just a minor change
+
+
 2009.08.08
 I'm not sure when I originally downloaded the .screenrc began modifying it.
 It was sometime in 2004 I believe.
