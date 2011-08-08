@@ -62,8 +62,8 @@ screen -t vmstat	0	vmstat 10
 screen -t htop		1	htop
 
 #screen -t logs 		90	
-screen -t asterisk	97	/usr/bin/sudo -u asterisk /usr/sbin/asterisk -cvvvvr
-screen -t mytop		96	mytop
+#screen -t asterisk	97	/usr/bin/sudo -u asterisk /usr/sbin/asterisk -cvvvvr
+#screen -t mytop		96	mytop
 #screen -t alog		98	/home/px/bin/alog.sh
 #!#screen -t irssi		99	irssi -!
 
@@ -844,7 +844,7 @@ bind I screen -t irssi		99	irssi -!
   msgwait 2
 #
 # Welcome the user:
-#  echo "welcome BoFH - could you please kill all DAUs?"
+  echo "welcome BoFH - could you please kill all DAUs?"
 #
 # Tell Vim to use a "tabstop" of '8',
 # ie expands TABs to the next column
