@@ -1,6 +1,6 @@
 # Filename: $HOME/.screenrc
 # Purpose:  Setup file for program "(GNU) screen"
-# Last Update: 2009.08.08
+# Last Update: 2011.11.11
 # Current Author: Rob Friedman / <px@ns1.net> / px.ns1.net
 # Original Author: Michael Prokop / <online@michael-prokop.at> / www.michael-prokop.at
 # ===============================================================
@@ -39,11 +39,22 @@
 # so to turn off the effect you *must*
 # "unset" the variable.
 #
+
+## Set your favorite programs
+## Browser
+#setenv BROWSER 'links'
+
+## top
+#setenv myTOP 'htop'
+setenv myTOP 'top'
+
+
 # ===============================================================
 # ESCAPE - the COMMAND CHARACTER
 # ===============================================================
 # escape ^aa  # default
 # escape ^pp  # suggested binding for emacs users
+# escape `    # backtick
 #
 escape ``
 
@@ -52,21 +63,22 @@ escape ``
 # ===============================================================
 # Uncomment one/some following lines to automatically let
 # SCREEN start some programs in the given window numbers:
-# screen -t mail       0 mutt
-# screen -t vim        1 vim
-# screen -t google     2 links http://www.google.com
-# screen -t slrn       3 slrn
-# screen -t www        4 $BROWSER http://www.michael-prokop.at/
-# screen -t www2       5 $BROWSER http://playerx.net/
+# screen -t mail       		0 mutt
+# screen -t vim        		1 vim
+# screen -t google     		20 $BROWSER http://www.google.com
+# screen -t gmail     		21 $BROWSER http://www.gmail.com
+# screen -t slrn       		3 slrn
+# screen -t $BROWSER   		5 $BROWSER http://www.michael-prokop.at/
+# screen -t $BROWSER  		5 $BROWSER http://playerx.net/
+# screen -t wolframalpha	6 links http://www.wolframalpha.com
 
-#screen -t vmstat	0	vmstat 10
-#screen -t htop		1	htop
+#screen -t vmstat		0	vmstat 10
+#screen -t $myTOP		1	$myTOP
 
 #screen -t logs 		90	
 #screen -t asterisk	97	/usr/bin/sudo -u asterisk /usr/sbin/asterisk -cvvvvr
 #screen -t mytop		96	mytop
-#screen -t alog		98	/home/px/bin/alog.sh
-#!#screen -t irssi		99	irssi -!
+#!#screen -t irssi		99	irssi -!   # use the -! so irssi disables autoconnection
 
 #
 # ===============================================================
@@ -75,7 +87,7 @@ escape ``
 # detach on hangup
 #  autodetach            on              # default: on
 #  crlf                  off             # default: off
-  deflogin              off             # default: on
+#  deflogin              off             # default: on
 # defsilence            off             # default: off
 # hardcopy_append       on              # default: off
 #  hardcopy_append       off             # default: off
@@ -113,9 +125,9 @@ escape ``
 
 # tell screen that xterm can switch to dark background and has function
 # keys.
-#  termcapinfo xterm 'VR=\E[?5h:VN=\E[?5l'
-#  termcapinfo xterm 'k1=\E[11~:k2=\E[12~:k3=\E[13~:k4=\E[14~'
-#  termcapinfo xterm 'kh=\EOH:kI=\E[2~:kD=\E[3~:kH=\EOF:kP=\E[5~:kN=\E[6~'
+  termcapinfo xterm 'VR=\E[?5h:VN=\E[?5l'
+  termcapinfo xterm 'k1=\E[11~:k2=\E[12~:k3=\E[13~:k4=\E[14~'
+  termcapinfo xterm 'kh=\EOH:kI=\E[2~:kD=\E[3~:kH=\EOF:kP=\E[5~:kN=\E[6~'
 
 # special xterm hardstatus: use the window title.
   termcapinfo xterm 'hs:ts=\E]2;:fs=\007:ds=\E]2;screen\007'
@@ -227,7 +239,7 @@ escape ``
 ################## hostname | windowlist  | <padded right>   04:20:20pm 2006.04.27 date
 #  caption always "%0=%{+b rk}%H %{bk}| %0L=%{mk}%>%-Lw%{= BW}%n%f* %t%{-}%+Lw%L>%?(%u)%? %{bk}|%>%=%{Yk} %=%C:%s%a %Y.%m.%d %{bk}%100="
 ################## hostname | windowlist  | <padded right>   04:20pm 2006.04.27 date
-  caption always "%0=%{+b rk}%H %{bk}| %0L=%{mk}%>%-Lw%{= BW}%n%f* %t%{-}%+Lw%L>%?(%u)%? %{bk}|%>%=%{Yk} %=%C%a %Y.%m.%d %{bk}%100="
+  caption always "%0=%{+b rk}%H %{bk}| %0L=%{mk}%>%-Lw%{= BW}%n%f* %t%{-}%+Lw%L>%?(%u)%? %{bk}|%>%=%{Yk} %=%C%A %Y.%m.%d %{bk}%100="
 
 # emerge strokes the %h not the %t          :)
   hardstatus on
@@ -302,7 +314,7 @@ escape ``
 #
 # "sorendition": set the colors for
 # the "messages" and "text marking"
-# (ie text you mark in copy mode):
+# (ie text you mark in copy mode, it also effects the hardstatus and caption):
   sorendition 10 99 # default!
 # sorendition 02 40 # green  on black
 # sorendition 02 34 # yellow on blue
@@ -394,7 +406,7 @@ escape ``
 #
 # vbell_msg:            Message shown when the
 #                       "virtual bell" rings.
-  vbell_msg             " *beep* "
+  vbell_msg             " *beep* *beep* "
 #
 # ==============================================================
 #  BIND bind - defaults
@@ -501,9 +513,9 @@ escape ``
 #
 # And here are the default bind commands if you need them:
 #
-# bind A title
-# bind C clear
-# bind D pow_detach
+# bind A title		# Set the title of the window
+# bind C clear		# clear the window
+# bind D pow_detach	# detach and power
 # bind F fit
 # bind H log
 # bind I login on
@@ -520,29 +532,29 @@ escape ``
 #
 # 040126 To be able to select windows with n > 9 ->
 # press "C-a - #" instead of just "C-a #"
-  bind - command -c select_1n
-  bind -c select_1n 0 select 10
-  bind -c select_1n 1 select 11
-  bind -c select_1n 2 select 12
-  bind -c select_1n 3 select 13
-  bind -c select_1n 4 select 14
-  bind -c select_1n 5 select 15
-  bind -c select_1n 6 select 16
-  bind -c select_1n 7 select 17
-  bind -c select_1n 8 select 18
-  bind -c select_1n 9 select 19
-  bind -c select_1n - command -c select_2n
-  bind -c select_2n 0 select 20
-  bind -c select_2n 1 select 21
-  bind -c select_2n 2 select 22
-  bind -c select_2n 3 select 23
-  bind -c select_2n 4 select 24
-  bind -c select_2n 5 select 25
-  bind -c select_2n 6 select 26
-  bind -c select_2n 7 select 27
-  bind -c select_2n 8 select 28
-  bind -c select_2n 9 select 29
-  bind -c select_2n - select -
+#  bind - command -c select_1n
+#  bind -c select_1n 0 select 10
+#  bind -c select_1n 1 select 11
+#  bind -c select_1n 2 select 12
+#  bind -c select_1n 3 select 13
+#  bind -c select_1n 4 select 14
+#  bind -c select_1n 5 select 15
+#  bind -c select_1n 6 select 16
+#  bind -c select_1n 7 select 17
+#  bind -c select_1n 8 select 18
+#  bind -c select_1n 9 select 19
+#  bind -c select_1n - command -c select_2n
+#  bind -c select_2n 0 select 20
+#  bind -c select_2n 1 select 21
+#  bind -c select_2n 2 select 22
+#  bind -c select_2n 3 select 23
+#  bind -c select_2n 4 select 24
+#  bind -c select_2n 5 select 25
+#  bind -c select_2n 6 select 26
+#  bind -c select_2n 7 select 27
+#  bind -c select_2n 8 select 28
+#  bind -c select_2n 9 select 29
+#  bind -c select_2n - select -
 #
 # ==============================================================
 # KEY BINDING FAQ:
@@ -600,8 +612,8 @@ escape ``
   bind h  hardcopy
 # make them better
   bind 'K' kill
-  bind 'I' login on
-  bind 'O' login off
+#  bind 'I' login on
+#  bind 'O' login off
   bind '}' history
 
 # I am using the uppercase letters to start programs/services:
@@ -768,13 +780,13 @@ escape ``
 #
 
 bind V screen -t vmstat		0	vmstat 10
-bind H screen -t htop		1	htop
+bind H screen -t $myTOP		1	$myTOP
 
 #bind A screen -t asterisk	97	/usr/bin/sudo -u asterisk /usr/sbin/asterisk -cvvvvr
 #screen -t alog		3	/bin/tail -f /var/log/apache/*log
  
-#bind 
-bind I screen -t irssi		99	irssi -!
+#bind I to irssi IRC client
+bind I screen -t irssi		99	irssi -! ## use the -! to disable autoconnect
 
 
 # FUNCTION KEYS 11 12
@@ -859,6 +871,6 @@ bind I screen -t irssi		99	irssi -!
 # http://www.jukie.net/~bart/blog/screen-ssh-agent
 #
 
-unsetenv SSH_AUTH_SOCK
-setenv SSH_AUTH_SOCK "$HOME/tmp/ssh-auth-sock"
+#unsetenv SSH_AUTH_SOCK
+#setenv SSH_AUTH_SOCK "$HOME/tmp/ssh-auth-sock"
 
