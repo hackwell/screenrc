@@ -57,9 +57,10 @@ escape ``
 # screen -t google     2 links http://www.google.com
 # screen -t slrn       3 slrn
 # screen -t www        4 $BROWSER http://www.michael-prokop.at/
+# screen -t www2       5 $BROWSER http://playerx.net/
 
-screen -t vmstat	0	vmstat 10
-screen -t htop		1	htop
+#screen -t vmstat	0	vmstat 10
+#screen -t htop		1	htop
 
 #screen -t logs 		90	
 #screen -t asterisk	97	/usr/bin/sudo -u asterisk /usr/sbin/asterisk -cvvvvr
