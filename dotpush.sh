@@ -1,5 +1,5 @@
 #!/bin/sh
-: <<< COMMENTBLOCK
+echo << COMMENTBLOCK
 Filename: dotpush.sh
 Purpose: pushing the shit out of dot files since 2005
 Last Update: 2009.08.08
