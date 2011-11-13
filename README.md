@@ -16,8 +16,8 @@ http://git.ns1.net/cgit/cgit.cgi/screenrc/
 	up much screen memory. I left a lot of the cruft as I tweaked the visuals.
 ==========================================================================
 ### SCREENSHOT: 
-
-#### TODO
+#### 2011.11.12
+![2011.11.12 80x25 screenshot](screenshot-80x25.png "2011.11.12 80x25 screenshot")
 
 ==========================================================================
 ### HISTORY:
