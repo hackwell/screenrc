@@ -17,7 +17,7 @@ http://git.ns1.net/cgit/cgit.cgi/screenrc/
 ==========================================================================
 ### SCREENSHOT: 
 #### 2011.11.12
-![2011.11.12 80x25 screenshot](screenshot-80x25.png "2011.11.12 80x25 screenshot")
+![2011.11.12 80x25 screenshot](/px/screenrc/raw/master/screenshot-80x25.png "2011.11.12 80x25 screenshot")
 
 ==========================================================================
 ### HISTORY:
